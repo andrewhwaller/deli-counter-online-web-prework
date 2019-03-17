@@ -16,3 +16,12 @@ def take_a_number(deli, name)
   deli.push(name)
   puts "Welcome, #{name}. You are number #{deli.index(name) + 1} in line."
 end
+
+def now_serving(deli)
+  if deli.length == 0
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{deli.first}."
+    deli.shift
+  end
+end
